@@ -1,4 +1,4 @@
-<% @posts.each do |post| %>
+<% @posts.order(:cached_votes_down).each do |post| %>
   <div class="post row clearfix">
     <h2>
       <%= link_to post.body, post %><br>
